@@ -7,12 +7,27 @@ def get_all_students():
     display.print_table(students, "Students List:")
 
 
+def add_new_student():
+    user_choice = display.get_inputs(["Name: ",
+                                      "Class: ",
+                                      "Subject1: ",
+                                      "Subject1Mark: ",
+                                      "Subject2: ",
+                                      "Subject2Mark: ",
+                                      "Subject3: ",
+                                      "Subject3Mark: ",
+                                      "Subject4: ",
+                                      "Subject4Mark: "], "Add new student:")
+    data_manager.write_new_row("model/files/students.csv", user_choice)
+    display.print_message("Student added.")
+
+
 def choose_operation():
     option = display.get_inputs(["Please enter a number: "], "")[0]
     if option == '1':
         get_all_students()
     elif option == '2':
-        display.print_message("Add", True)
+        add_new_student()
     elif option == '3':
         display.print_message("Update", True)
     elif option == '4':
