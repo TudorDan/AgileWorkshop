@@ -25,3 +25,9 @@ def write_table_to_file(file_name, table):
         for record in table:
             row = ';'.join(record)
             file.write(row + "\n")
+
+
+def write_new_row(file_name, table):
+    with open(file_name, "a+") as file:
+        row = ';'.join(table)
+        file.write(row + "\n")
