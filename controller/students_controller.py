@@ -12,11 +12,11 @@ def choose_operation():
     if option == '1':
         get_all_students()
     elif option == '2':
-        display.print_message("Add", True)
+        display.print_message("'Add a new student' not implemented!", True)
     elif option == '3':
-        display.print_message("Update", True)
+        display.print_message("'Update student' not implemented!", True)
     elif option == '4':
-        display.print_message("Delete", True)
+        display.print_message("'Delete student' not implemented!", True)
     elif option == '0':
         return False
     else:
